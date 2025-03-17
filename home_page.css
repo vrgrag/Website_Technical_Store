@@ -1,0 +1,245 @@
+
+
+.main-content-right {
+    display: flex;
+    align-items: flex-start; /* Выровнять блоки по верхнему краю */
+    justify-content: space-between;
+    padding: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Общий стиль для блока социальных сетей */
+.social-networks {
+    margin-top: 400px; /* Отступ сверху, чтобы позиционировать ниже остальных элементов */
+    text-align: left;
+    border: 1px solid #AEAEAE; /* Цвет обводки */
+    padding: 15px; /* Отступы внутри блока */
+    border-radius: 5px; /* Закругление углов */
+    max-width: 200px; /* Ширина блока */
+}
+a {
+    text-decoration: none !important; /* Убираем подчеркивание */
+    color: inherit; /* Цвет наследуется от родительского */
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none; /* Подчеркивание не появляется при наведении */
+    color: inherit; /* Цвет не меняется */
+}
+
+
+/* Стили для заголовка блока "СОЦИАЛЬНЫЕ СЕТИ" */
+.social-networks p {
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    white-space: nowrap; /* Отключает перенос текста на новую строку */
+}
+/* Стили для ссылок (текста) социальных сетей */
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 5px; /* Отступ между иконками */
+    transition: color 0.3s;
+    letter-spacing: 0.8px;
+}
+
+/* Изменение цвета при наведении на ссылку */
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Стили для иконок внутри социальных сетей */
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.main-image-container {
+    margin-top: 20px; /* Установите нужное значение отступа */
+}
+.large-image {
+    width: 1100px;
+    height: 600px;
+    margin-left: 30px; /* Отступ слева, чтобы не прилипало к краю */
+    border-radius: 3px;
+}
+
+
+
+
+.custom-spacing .col-md-4 .img-fluid,
+.custom-spacing .col-6 .img-fluid {
+    width: 1000px; /* Ширина каждой фотографии */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.text { 
+    width: 100%;
+    max-width: 1530px; 
+    height: auto;
+    padding: 20px;
+    margin: 30px auto 0 auto; 
+    display: flex; 
+    justify-content: flex-start; /* Устанавливаем начало выравнивания */
+}
+
+.title-2 {
+    font-size: 36px;
+    line-height: 1;
+    color: #000000; 
+    padding-left: 172px; /* Добавляем отступ слева для сдвига вправо */
+	font-weight: 700;
+}
+
+
+.products {
+	padding: 70px 0 0;
+	display: flex;
+	justify-content: center; /* Центрирование карточек */
+}
+
+.products__cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Центрирование карточек в контейнере */
+	margin-bottom: 60px; /* Устанавливаем отступ 60px снизу для контейнера карточек */
+	list-style-type: none;
+}
+
+.products__card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 30px 30px; /* Отступы между карточками */
+	padding: 35px 20px 40px;
+	width: 351px;
+	min-height: 485px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.products__card:hover .products__card-nav {
+	opacity: 1;
+}
+
+.products__card-title {
+    color: #000;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	margin-bottom: 15px;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.2px;
+}
+
+.products__card-price {
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.products__card-img {
+    width: 201px;
+ height: auto;
+	margin: auto;
+}
+
+.products__card-nav {
+	position: absolute;
+	left: 50%;
+	top: 53%;
+	display: flex;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.3s;
+}
+
+.products__card-item:not(:last-child) {
+	margin-right: 15px; /* Этот отступ можно оставить без изменений, так как он применяется только к элементам навигации внутри карточки */
+}
+
+.next-block {
+	margin-top: 60px; /* Устанавливаем отступ 60px сверху для следующего блока */
+}
+.i-icon{
+	width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+ 
+.text-2 { 
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 20px auto  auto; 
+    display: flex; 
+    justify-content: flex-start; /* Устанавливаем начало выравнивания */
+}
+
+.title-3 {
+    font-size: 36px;
+    line-height: 1;
+    color: #000000; 
+    padding-left: 40px; /* Добавляем отступ слева для сдвига вправо */
+	font-weight: 700;
+}
+
+.news {
+    padding: 70px 0 0;
+    display: flex;
+    justify-content: center; /* Центрирование карточек */
+}
+
+
+.news-wrapper {
+    max-width: 95%; /* Настройте значение по вашему усмотрению */
+    margin: 0 auto; /* Центрирование блока */
+}
+.card {
+    border: none; /* Убираем стандартную рамку Bootstrap */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем легкую тень */
+}
+
+.card-title {
+    color: black;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text {
+    color: black;
+    font-feature-settings: 'dnom' on;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px; 
+}
+.news__card-link {
+    text-decoration: none !important; /* Убирает подчеркивание */
+    color: black !important; /* Устанавливает черный цвет */
+}
