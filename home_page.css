@@ -27,7 +27,15 @@ a:hover, a:focus, a:active {
     text-decoration: none; /* Подчеркивание не появляется при наведении */
     color: inherit; /* Цвет не меняется */
 }
-
+.banner{
+    width: 1280px;
+    height: 260px;
+    padding-top: 120px;
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
 
 /* Стили для заголовка блока "СОЦИАЛЬНЫЕ СЕТИ" */
 .social-networks p {
@@ -100,85 +108,125 @@ a:hover, a:focus, a:active {
     font-size: 36px;
     line-height: 1;
     color: #000000; 
-    padding-left: 172px; /* Добавляем отступ слева для сдвига вправо */
-	font-weight: 700;
+    font-weight: 700px;
+     /* Смещаем заголовок на 80px от левого края */
 }
 
 
-.products {
-	padding: 70px 0 0;
-	display: flex;
-	justify-content: center; /* Центрирование карточек */
+.categories {
+    display: flex;
+    gap: 20px; /* Отступ между карточками */
+    justify-content: center; /* Центрирование карточек по горизонтали */
 }
 
-.products__cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center; /* Центрирование карточек в контейнере */
-	margin-bottom: 60px; /* Устанавливаем отступ 60px снизу для контейнера карточек */
-	list-style-type: none;
+
+.category-card {
+    width: 200px;
+    min-height: 246px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.products__card {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 0 30px 30px; /* Отступы между карточками */
-	padding: 35px 20px 40px;
-	width: 351px;
-	min-height: 485px;
-	border-radius: 3px;
-	border: 1px solid #cccccc;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.category-image {
+    width: 200px;
+    height: 211px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.products__card:hover .products__card-nav {
-	opacity: 1;
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
 }
 
-.products__card-title {
-    color: #000;
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	margin-bottom: 15px;
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 0.2px;
+.discounts {
+    margin-bottom: 30px;
 }
 
-.products__card-price {
-	font-size: 16px;
-	color: #000000;
-	font-weight: bold;
-	font-size: 24px;
+.discount-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 3px;
+    font-size: 0.9em;
 }
 
-.products__card-img {
-    width: 201px;
- height: auto;
-	margin: auto;
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.products__card-nav {
-	position: absolute;
-	left: 50%;
-	top: 53%;
-	display: flex;
-	opacity: 0;
-	transform: translate(-50%, -50%);
-	transition: opacity 0.3s;
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.products__card-item:not(:last-child) {
-	margin-right: 15px; /* Этот отступ можно оставить без изменений, так как он применяется только к элементам навигации внутри карточки */
+.product-title {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.price-container {
+    margin: 15px 0;
+}
+
+.new-price {
+    color: #e91e63;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.stock-status {
+    color: #4CAF50;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+.add-to-cart:hover {
+    background-color: #1976D2;
+}
+
+.discount-percent {
+    background: #ff4444;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .next-block {
@@ -199,6 +247,7 @@ a:hover, a:focus, a:active {
     display: flex; 
     justify-content: flex-start; /* Устанавливаем начало выравнивания */
 }
+
 
 .title-3 {
     font-size: 36px;
