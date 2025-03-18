@@ -336,10 +336,12 @@ hr {
 }
 
 .footer-logo {
-    width: 100%; /* Логотип будет адаптироваться под ширину родителя */
-    max-width: 200px;
+ font-size: 40px;
     height: auto;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, #59006F  0%, #260DC1  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-text {

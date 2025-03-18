@@ -84,7 +84,15 @@ a:hover, a:focus, a:active {
 }
 
 
-
+.banner{
+    width: 1280px;
+    height: 260px;
+    padding-top: 120px;
+    background: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
 
 .custom-spacing .col-md-4 .img-fluid,
 .custom-spacing .col-6 .img-fluid {
