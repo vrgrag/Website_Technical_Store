@@ -4,7 +4,7 @@
     display: flex;
     align-items: flex-start; /* Выровнять блоки по верхнему краю */
     justify-content: space-between;
-    padding: 20px; 
+    padding: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -102,140 +102,235 @@ a:hover, a:focus, a:active {
     padding-right: 15px;
 }
 
-.text { 
+.text {
     width: 100%;
-    max-width: 1530px; 
+    max-width: 1530px;
     height: auto;
     padding: 20px;
-    margin: 30px auto 0 auto; 
-    display: flex; 
+    margin: 30px auto 0 auto;
+    display: flex;
     justify-content: flex-start; /* Устанавливаем начало выравнивания */
 }
 
 .title-2 {
     font-size: 36px;
     line-height: 1;
-    color: #000000; 
+    color: #000000;
     font-weight: 700px;
      /* Смещаем заголовок на 80px от левого края */
 }
 
 
-.categories {
+/* Контейнер для карточек */
+.product-container {
+    display: flex;           /* Используем flex для выстраивания карточек */
+    flex-wrap: wrap;         /* Перенос карточек на следующую строку при нехватке места */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    gap: 20px;               /* Отступы между карточками */
+    padding: 20px;
+  }
+
+  /* Стили для одной карточки товара */
+  .product-card {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 16px;
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+  }
+
+  /* Изображение товара */
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ярлык скидки */
+  .discount-label {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: yellow;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  /* Заголовок товара */
+  .product-card h2 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+
+  /* Текущая цена */
+  .price {
+    font-size: 24px;
+    color: #000;
+    margin: 12px 0 4px;
+  }
+
+  /* Оригинальная цена с зачёркиванием */
+  .original-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #888;
+    margin: 0 0 12px;
+  }
+
+  /* Информация о наличии */
+  .in-stock {
+    font-size: 16px;
+    color: green;
+    margin-bottom: 12px;
+  }
+
+  /* Иконка "Избранное" */
+  .favorite-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('heart-icon.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 12px;
+  }
+
+  /* Кнопка "В корзину" */
+  .add-to-cart {
+    display: block;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background-color: darkblue;
+  }
+
+  .categories {
     display: flex;
     gap: 20px; /* Отступ между карточками */
     justify-content: center; /* Центрирование карточек по горизонтали */
-}
+    padding: 20px;
+  }
 
-
-.category-card {
+  .category-card {
     width: 200px;
     min-height: 246px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Изменено: вертикальное расположение элементов */
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Элементы располагаются сверху вниз */
     padding: 10px;
     border-radius: 10px;
     background-color: #f5f5f5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+  }
 
-.category-image {
+  .category-image {
     width: 200px;
     height: 211px;
     object-fit: cover;
     border-radius: 8px;
-}
+  }
 
-.category-title {
+  .category-title {
     font-size: 16px;
     font-weight: bold;
     color: #333;
     margin-top: 5px;
-}
 
-.discounts {
-    margin-bottom: 30px;
-}
+  }
 
-.discount-badge {
-    display: inline-block;
-    padding: 5px 10px;
-    margin: 5px;
-    background-color: #ff4444;
-    color: white;
-    border-radius: 3px;
-    font-size: 0.9em;
-}
+ /* Контейнер товара */
+ .product-card {
+    position: relative; /* для абсолютного позиционирования ярлыка скидки */
+    border: 1px solid #ddd;
+    padding: 16px;
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+  }
 
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.product-title {
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-
-.price-container {
-    margin: 15px 0;
-}
-
-.new-price {
-    color: #e91e63;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: #666;
-    font-size: 0.9em;
-}
-
-.stock-status {
-    color: #4CAF50;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
-.add-to-cart {
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+  /* Изображение товара */
+  .product-image {
     width: 100%;
-    font-size: 1em;
-}
+    height: auto;
+  }
 
-.add-to-cart:hover {
-    background-color: #1976D2;
-}
+  /* Ярлык скидки */
+  .discount-label {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: yellow;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
 
-.discount-percent {
-    background: #ff4444;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 0.8em;
+  /* Текущая цена */
+  .price {
+    font-size: 24px;
+    color: #000;
+    margin: 12px 0 4px;
+  }
+
+  /* Оригинальная цена (со зачёркиванием) */
+  .original-price {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #888;
+    margin: 0 0 12px;
+  }
+
+  /* Информация о наличии */
+  .in-stock {
+    font-size: 16px;
+    color: green;
+    margin-bottom: 12px;
+  }
+
+  /* Иконка "Избранное" */
+  .favorite-icon {
     display: inline-block;
-    margin-bottom: 5px;
-}
+    width: 24px;
+    height: 24px;
+    background: url('heart-icon.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 12px;
+  }
+
+  /* Кнопка "В корзину" */
+  .add-to-cart {
+    display: block;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background-color: darkblue;
+  }
+
+
+  .stock {
+    color: #28a745;
+    margin-bottom: 15px;
+  }
 
 .next-block {
 	margin-top: 60px; /* Устанавливаем отступ 60px сверху для следующего блока */
@@ -246,13 +341,13 @@ a:hover, a:focus, a:active {
     margin-top: 50px;
     margin-bottom: 50px;
 }
- 
-.text-2 { 
+
+.text-2 {
     width: 100%;
     height: auto;
     padding: 10px;
-    margin: 20px auto  auto; 
-    display: flex; 
+    margin: 20px auto  auto;
+    display: flex;
     justify-content: flex-start; /* Устанавливаем начало выравнивания */
 }
 
@@ -260,7 +355,7 @@ a:hover, a:focus, a:active {
 .title-3 {
     font-size: 36px;
     line-height: 1;
-    color: #000000; 
+    color: #000000;
     padding-left: 40px; /* Добавляем отступ слева для сдвига вправо */
 	font-weight: 700;
 }
@@ -294,7 +389,7 @@ a:hover, a:focus, a:active {
     font-family: Montserrat;
     font-size: 13px;
     font-weight: 300;
-    line-height: 20px; 
+    line-height: 20px;
 }
 .news__card-link {
     text-decoration: none !important; /* Убирает подчеркивание */
